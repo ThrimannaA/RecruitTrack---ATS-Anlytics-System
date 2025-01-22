@@ -1,0 +1,6 @@
+streamlit
+python-dotenv
+PyPDF2 #uses for read all texts in the pdf
+google-generativeai
+python-docx
+
