@@ -160,9 +160,11 @@ https://github.com/user-attachments/assets/b18bb06f-2312-487c-bf6b-0bba18b6b344
 - Email: thrimanna2000@gmail.com
 - LinkedIn: https://www.linkedin.com/in/anuji-thrimanna-6389392a9/
 
+
 ## Deployed Live Demo (Streamlit)
 
 https://recruittrack---ats-anlytics-system-bvpljqtybm8bj2pkn2w8te.streamlit.app/
+
 
 
 ⭐ If you find this project useful, please consider giving it a star on GitHub!
