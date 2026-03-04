@@ -90,59 +90,59 @@ Priority	Model	RPM	RPD	Description
 💡 Features in Detail
 
 1. Candidate Review
-- Provides comprehensive evaluation including:
-
-- Overall alignment with job role
-
-- Key strengths from resume
-
-- Potential weaknesses or gaps
-
-- Professional recommendations
+  - Provides comprehensive evaluation including:
+  
+  - Overall alignment with job role
+  
+  - Key strengths from resume
+  
+  - Potential weaknesses or gaps
+  
+  - Professional recommendations
 
 2. Missing Keywords Analysis
-- Identifies critical keywords missing from resume:
-
-- Technical skills required
-
-- Soft skills mentioned in JD
-
-- Industry-specific terminology
-
-- Certification requirements
+  - Identifies critical keywords missing from resume:
+  
+  - Technical skills required
+  
+  - Soft skills mentioned in JD
+  
+  - Industry-specific terminology
+  
+  - Certification requirements
 
 3. Similarity Analysis
-- Generates match score with:
-
-- Percentage match (0-100%)
-
-- Key matching areas
-
-- Significant gaps
-
-- Detailed explanation
+  - Generates match score with:
+  
+  - Percentage match (0-100%)
+  
+  - Key matching areas
+  
+  - Significant gaps
+  
+  - Detailed explanation
 
 4. Interview Questions Generator
-- Creates tailored questions:
-
-- Technical questions based on required skills
-
-- Behavioral questions from job requirements
-
-- Experience-based questions
-
-- Role-specific scenarios
+  - Creates tailored questions:
+  
+  - Technical questions based on required skills
+  
+  - Behavioral questions from job requirements
+  
+  - Experience-based questions
+  
+  - Role-specific scenarios
 
 🎨 UI Customization
-- The application features custom styling:
-
-- Purple buttons with rounded corners
-
-- Teal input fields with dark blue text
-
-- Pink labels for better visibility
-
-- Clean, professional layout
+  - The application features custom styling:
+  
+  - Purple buttons with rounded corners
+  
+  - Teal input fields with dark blue text
+  
+  - Pink labels for better visibility
+  
+  - Clean, professional layout
 
 📊 Sample Output
 Candidate Review Example
@@ -187,9 +187,13 @@ Visual charts for skill matching
 This project is for educational and professional development purposes.
 
 📧 Contact
-Anuji Thrimanna
-Email: thrimanna2000@gmail.com
-LinkedIn: https://www.linkedin.com/in/anuji-thrimanna-6389392a9/
+- Anuji Thrimanna
+- Email: thrimanna2000@gmail.com
+- LinkedIn: https://www.linkedin.com/in/anuji-thrimanna-6389392a9/
+
+## Deployed Live Demo (Streamlit)
+
+https://recruittrack---ats-anlytics-system-bvpljqtybm8bj2pkn2w8te.streamlit.app/
 
 ## Video Demo
 
