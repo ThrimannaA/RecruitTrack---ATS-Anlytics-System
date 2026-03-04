@@ -87,6 +87,13 @@ Priority	Model	RPM	RPD	Description
 - 5th	gemma-3-27b-it	30	14,400	Massive quota, text-only
 - 6th	gemini-robotics-er-1.5-preview	10	20	Experimental
 
+🎥 Sample Output
+- Watch the demo video below to see RecruitTrack in action:
+
+https://github.com/user-attachments/assets/b18bb06f-2312-487c-bf6b-0bba18b6b344
+
+- The video demonstrates the complete workflow from start to finish, showcasing all four analysis modes and the intuitive user interface.
+
 💡 Features in Detail
 
 1. Candidate Review
