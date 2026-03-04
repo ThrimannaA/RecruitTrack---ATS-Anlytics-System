@@ -164,9 +164,5 @@ This project is for educational and professional development purposes.
 
 https://recruittrack---ats-anlytics-system-bvpljqtybm8bj2pkn2w8te.streamlit.app/
 
-## Video Demo
-
-https://github.com/user-attachments/assets/b18bb06f-2312-487c-bf6b-0bba18b6b344
-
 
 ⭐ If you find this project useful, please consider giving it a star on GitHub!
