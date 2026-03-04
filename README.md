@@ -153,7 +153,7 @@ https://github.com/user-attachments/assets/b18bb06f-2312-487c-bf6b-0bba18b6b344
 
 
 📝 License
-This project is for educational and professional development purposes.
+- This project is for educational and professional development purposes.
 
 📧 Contact
 - Anuji Thrimanna
