@@ -1,20 +1,44 @@
 import streamlit as st
-import google.generativeai as genai
+from google import genai
 import os
 from dotenv import load_dotenv
 from PyPDF2 import PdfReader
-from docx import Document  # For reading .docx files
+from docx import Document
 
-load_dotenv()  # Load environment variables
+load_dotenv()
 
-# Configure Gemini Pro API
-genai.configure(api_key=os.getenv("Google_API_KEY"))
+# Debug: Check if API key loads
+api_key = os.getenv("Google_API_KEY")
+if not api_key:
+    st.error("⚠️ Google_API_KEY not found in .env file! Please add it.")
+    st.stop()
 
-# Gemini Pro response
+# Initialize client
+client = genai.Client(api_key=api_key)
+
+# Gemini response with models from your dashboard
 def get_gemini_response(input_text):
-    model = genai.GenerativeModel("gemini-pro")
-    response = model.generate_content(input_text)
-    return response.text
+    models_to_try = [
+        "gemini-2.5-flash-lite",        # 10 RPM, 20 RPD available
+        "gemini-3-flash",                # 5 RPM, 20 RPD available
+        "gemini-2.5-flash",              # 5 RPM, 20 RPD (you have 21/20 used)
+        "gemini-3.1-flash-lite",         # 15 RPM, 500 RPD available
+        "gemma-3-27b-it",                # 30 RPM, 14.4K RPD available
+        "gemini-robotics-er-1.5-preview", # 10 RPM, 20 RPD available
+    ]
+    
+    for model_name in models_to_try:
+        try:
+            response = client.models.generate_content(
+                model=model_name,
+                contents=input_text
+            )
+            return response.text
+        except Exception as e:
+            print(f"Model {model_name} failed: {e}")
+            continue
+    
+    return "Error: Could not get response from any model"
 
 # Function to extract text from PDF
 def extract_pdf_text(uploaded_file):
@@ -95,7 +119,8 @@ if st.button("Review Candidate Details"):
         resume_text = extract_text(uploaded_file)
         if resume_text:
             input_prompt = input_prompt1.format(resume_text=resume_text, job_description=jd)
-            response = get_gemini_response(input_prompt)
+            with st.spinner("Analyzing..."):
+                response = get_gemini_response(input_prompt)
             st.subheader("Candidate Review")
             st.write(response)
     else:
@@ -106,7 +131,8 @@ if st.button("Identify Missing Keywords"):
         resume_text = extract_text(uploaded_file)
         if resume_text:
             input_prompt = input_prompt3.format(resume_text=resume_text, job_description=jd)
-            response = get_gemini_response(input_prompt)
+            with st.spinner("Analyzing..."):
+                response = get_gemini_response(input_prompt)
             st.subheader("Missing Keywords")
             st.write(response)
     else:
@@ -117,7 +143,8 @@ if st.button("Similarity Analysis"):
         resume_text = extract_text(uploaded_file)
         if resume_text:
             input_prompt = input_prompt4.format(resume_text=resume_text, job_description=jd)
-            response = get_gemini_response(input_prompt)
+            with st.spinner("Analyzing..."):
+                response = get_gemini_response(input_prompt)
             st.subheader("Similarity Analysis")
             st.write(response)
     else:
@@ -128,7 +155,8 @@ if st.button("Generate Interview Questions for Recruiters"):
         resume_text = extract_text(uploaded_file)
         if resume_text:
             input_prompt = input_prompt_questions.format(resume_text=resume_text, job_description=jd)
-            response = get_gemini_response(input_prompt)
+            with st.spinner("Analyzing..."):
+                response = get_gemini_response(input_prompt)
             st.subheader("Generated Interview Questions for Recruiters to Ask Candidates")
             st.write(response)
     else:
